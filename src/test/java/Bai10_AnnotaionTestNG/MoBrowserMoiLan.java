@@ -1,4 +1,4 @@
-package Bai9.TestNGFramework;
+package Bai10_AnnotaionTestNG;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,12 +9,12 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class RunTestNG {
+public class MoBrowserMoiLan {
+    //BeforeMethod
     WebDriver driver;
 
-    @BeforeClass
-    public void createDriver() {
-
+    @BeforeMethod
+    public void createBrowser(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -38,8 +38,10 @@ public class RunTestNG {
         Thread.sleep(1000);
     }
 
-    @AfterClass
-    public void closeDriver() {
+    //AfterTest hoặc AferClass
+    @AfterMethod
+    public  void closeBrowser(){
         driver.quit();
     }
+
 }
