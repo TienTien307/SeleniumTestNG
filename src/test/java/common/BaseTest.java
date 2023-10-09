@@ -15,7 +15,7 @@ public class BaseTest {
 
     @BeforeClass
     public void createBrowser(){
-        System.out.println("Start Chrome browser from basetest");
+        System.out.println("Start Chrome browser");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -23,9 +23,9 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
     }
 
-//    @AfterClass
-//    public void closeBrowser(){
-//        System.out.println("Close browser");
-//        driver.quit();
-//    }
+    @AfterClass
+    public void closeBrowser(){
+        System.out.println("Close browser");
+        driver.quit();
+    }
 }
