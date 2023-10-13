@@ -23,9 +23,9 @@ public class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
     }
 
-    @AfterClass
-    public void closeBrowser(){
-        System.out.println("Close browser");
-        driver.quit();
-    }
+//    @AfterClass
+//    public void closeBrowser(){
+//        System.out.println("Close browser");
+//        driver.quit();
+//    }
 }
