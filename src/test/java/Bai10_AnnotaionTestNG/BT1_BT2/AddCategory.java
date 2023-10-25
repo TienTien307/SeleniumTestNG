@@ -95,6 +95,7 @@ public class AddCategory extends BaseTest {
 
     @Test (priority = 5)
     public void AddNewProduct() throws InterruptedException{
+        login();
         backtohome();
 
         Thread.sleep(1000);
