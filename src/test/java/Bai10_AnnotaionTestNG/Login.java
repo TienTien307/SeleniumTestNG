@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 public class Login extends BaseTest{
 
-
     @Test (priority = 1)
     public void testlogin() throws InterruptedException {
         System.out.println("runtest login");
