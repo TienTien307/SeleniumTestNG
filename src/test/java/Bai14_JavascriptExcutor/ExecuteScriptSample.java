@@ -23,9 +23,10 @@ public class ExecuteScriptSample extends BaseTest {
 
         driver.findElement(By.xpath("//i[normalize-space()='*Use Email Instead']")).click();
         //Điền giá trị vào input
-        js.executeScript("arguments[0].setAttribute('value','admin02@mailinator.com');", driver.findElement(By.xpath("(//input[@id='email'])[1]")));
-        js.executeScript("arguments[0].setAttribute('value','123456');", driver.findElement(By.xpath("//input[@id='password']")));
-        driver.findElement(By.xpath("button[class='btn btn-primary btn-block fw-700 fs-14 rounded-4']")).click();
+        js.executeScript("arguments[0].setAttribute('value','customer@example.com');", driver.findElement(By.xpath("(//input[@id='email'])[1]")));
+        js.executeScript("arguments[0].setAttribute('value',arguments[1]);", driver.findElement(By.xpath("//input[@id='password']")),"123456");
+        WebUI.sleep(1);
+        driver.findElement(By.xpath("(//button[normalize-space()='Login'])[1]")).click();
 
         WebUI.sleep(2);
     }
