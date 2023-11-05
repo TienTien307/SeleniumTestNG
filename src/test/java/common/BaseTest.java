@@ -19,7 +19,9 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        //chờ đợi ngầm định cho mỗi câu lệnh tìm kiếm driver.findElement
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //chờ đợi trang load xong
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
     }
 
